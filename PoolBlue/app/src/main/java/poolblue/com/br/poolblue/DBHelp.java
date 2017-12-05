@@ -10,9 +10,6 @@ import android.database.sqlite.SQLiteStatement;
 import java.util.ArrayList;
 import java.util.List;
 
-import static poolblue.com.br.poolblue.DBHelp.DATABASE;
-import static poolblue.com.br.poolblue.DBHelp.TABLE_NAME;
-import static poolblue.com.br.poolblue.DBHelp.VERSION;
 
 /**
  * Created by rafaelcarvalho on 04/12/2017.
@@ -93,8 +90,8 @@ public class DBHelp {
         @Override
         public void onCreate(SQLiteDatabase db) {
 
-            String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (id INTEGER PRIMARY KEY AUTOINCREMENT, nome VARCHAR(50)," +
-                    "endereco VARCHAR(50), empresa VARCHAR(20), sexo VARCHAR(10), cargo VARCHAR(20))";
+            String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT," +
+                    "endereco TEXT, empresa TEXT, sexo TEXT, cargo TEXT)";
             db.execSQL(sql);
         }
 
