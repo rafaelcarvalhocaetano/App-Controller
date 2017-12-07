@@ -3,6 +3,7 @@ package birddb.com.br.birddb;
 
 import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +20,7 @@ public class MainActivity extends Activity implements OnClickListener {
     //Chamando o banco
     SQLiteDatabase db;
     //Instancia uma caixa de mensagem
-    private Mensagem show = new Mensagem(MainActivity.this);
+    private Mensagem msn = new Mensagem(MainActivity.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,43 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     public void onClick(View view) {
         //implementar o CRUD do android com SQLite
+        //Pegando os valores dos campos
+        ra = eRa.getText().toString();
+        nome = eNome.getText().toString();
+        curso = eCurso.getText().toString();
+
+        if(view == btnAdd){
+            if(verificaCampo()){
+                msn.show("Erro", "Verifique os campos");
+                return;
+            }
+            //insert
+            db.execSQL("INSERT INTO aluno VALUES(' "+ra+" ',' "+nome+" ',' "+curso+" ');");
+            msn.show("SUCESSO", "Aluno Cadastrados");
+            limparCampos();
+
+        }
+        if(view == btnListar){
+            //list
+            Cursor c = db.rawQuery("SELECT * FROM aluno", null);
+            if(c.getCount() == 0){
+                msn.show("AVISO", "Sem dados no banco SQLite");
+                return;
+            }
+            StringBuffer s = new StringBuffer();
+            while (c.moveToNext()){
+                s.append("RA:"+c.getString(0)+"\n");
+                s.append("NOME:"+c.getString(1)+"\n");
+                s.append("CURSO:"+c.getString(2)+"\n\n");
+            }
+            //Exibir os registros
+            msn.show("ALUNOS", s.toString());
+
+        }
+        if(view == btnInfo){
+            msn.show("Info - Exemplo Android e SQLite", "By Rafael Carvalho Caetano");
+
+        }
 
     }
     //Limpa o campo dos EditText
