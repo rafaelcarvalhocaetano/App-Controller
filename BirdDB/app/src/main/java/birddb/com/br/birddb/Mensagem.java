@@ -12,11 +12,12 @@ public class Mensagem {
     private Context c;
 
     public Mensagem(Context context){
+
         this.c = context;
     }
     //Método de mensagem
     public void show(String titulo, String texto){
-        AlertDialog.Builder adb = new AlertDialog.Builder();
+        AlertDialog.Builder adb = new AlertDialog.Builder(c);
         adb.setTitle(titulo);
         adb.setMessage(texto);
         adb.setNeutralButton("OK", null);

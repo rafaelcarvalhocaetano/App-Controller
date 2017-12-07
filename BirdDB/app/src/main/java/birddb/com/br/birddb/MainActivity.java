@@ -27,8 +27,8 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        eNome = (EditText) findViewById(R.id.nome);
         eRa = (EditText) findViewById(R.id.ra);
+        eNome = (EditText) findViewById(R.id.nome);
         eCurso = (EditText) findViewById(R.id.curso);
 
         btnAdd = (Button) findViewById(R.id.btnEnviar);
@@ -46,11 +46,10 @@ public class MainActivity extends Activity implements OnClickListener {
         btnInfo.setOnClickListener(this);
 
         //SQLITE
-        db = openOrCreateDatabase("alunoDB", Context.MODE_PRIVATE,  null);
+        db = openOrCreateDatabase("AlunoDB", Context.MODE_PRIVATE,  null);
 
         //Criando a tabela
-        db.execSQL("CREATE TABLE IF NOT EXISTS aluno(nome varchar, ra varchar, curso varchar)");
-
+        db.execSQL("CREATE TABLE IF NOT EXISTS aluno(ra varchar, nome varchar, curso varchar)");
     }
 
     //Verifica se os campos não tem nada, se tiver salva caso contrario não salva
@@ -72,10 +71,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 return;
             }
             //insert
-            db.execSQL("INSERT INTO aluno VALUES(' "+ra+"',' "+nome+"','"+curso+"');");
+            db.execSQL("INSERT INTO aluno VALUES ('"+ra+"','"+nome+"','"+curso+"');");
             msn.show("SUCESSO", "Aluno Cadastrados");
             limparCampos();
-
         }
         if(view == btnListar){
             //list
@@ -86,9 +84,9 @@ public class MainActivity extends Activity implements OnClickListener {
             }
             StringBuffer s = new StringBuffer();
             while (c.moveToNext()){
-                s.append("RA:"+c.getString(0)+"\n");
-                s.append("NOME:"+c.getString(1)+"\n");
-                s.append("CURSO:"+c.getString(2)+"\n\n");
+                s.append("RA :"+ c.getString(0)+ "\n");
+                s.append("NOME :"+ c.getString(1) +"\n");
+                s.append("CURSO :"+ c.getString(2) +"\n\n");
             }
             //Exibir os registros
             msn.show("ALUNOS", s.toString());
@@ -97,16 +95,16 @@ public class MainActivity extends Activity implements OnClickListener {
             msn.show("Info - Exemplo Android e SQLite", "By Rafael Carvalho Caetano");
         }
         if(view == btnPesquisar){
-            if(ra.trim().length()==0){
-                msn.show("Erro", "Informe o RA");
+            if(ra.trim().length() == 0){
+                msn.show("AVISO", "Informe o RA");
                 return;
             }
-            Cursor c = db.rawQuery("SELECT * FROM aluno WHERE ra='"+ ra +"' ", null);
+            Cursor c = db.rawQuery(" SELECT * FROM aluno WHERE ra='" + ra + "' ", null);
             if(c.moveToFirst()){
                 eNome.setText(c.getString(1));
                 eCurso.setText(c.getString(2));
             }else{
-                msn.show("Erro","RA inválido ou não localizado!");
+                msn.show("Erro","RA não localizado!");
                 return;
             }
         }
@@ -132,7 +130,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 msn.show("Erro", "Informe o RA");
                 return;
             }
-            Cursor c = db.rawQuery("SELECT * FROM aluno WHERE ra='"+ra+"'", null);
+            Cursor c = db.rawQuery("SELECT * FROM aluno WHERE ra='"+ra+"';", null);
             if(c.moveToFirst()){
                 db.execSQL("DELETE FROM aluno WHERE ra='"+ra+"';");
                 msn.show("SUCESSO", "Registro excluído com sucesso !");
