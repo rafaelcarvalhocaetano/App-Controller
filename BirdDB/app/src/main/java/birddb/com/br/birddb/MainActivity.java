@@ -46,7 +46,7 @@ public class MainActivity extends Activity implements OnClickListener {
         btnInfo.setOnClickListener(this);
 
         //SQLITE
-        db = openOrCreateDatabase("AlunoDB", Context.MODE_PRIVATE,  null);
+        db = openOrCreateDatabase("alunoDB", Context.MODE_PRIVATE,  null);
 
         //Criando a tabela
         db.execSQL("CREATE TABLE IF NOT EXISTS aluno(nome varchar, ra varchar, curso varchar)");
@@ -55,7 +55,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
     //Verifica se os campos não tem nada, se tiver salva caso contrario não salva
     public boolean verificaCampo(){
-        return (ra.trim().length() == 0 || nome.trim().length() == 0 || curso.trim().length() == 0)
+        return (ra.trim().length() == 0 || nome.trim().length() == 0 || curso.trim().length() == 0);
     }
 
     @Override
@@ -72,7 +72,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 return;
             }
             //insert
-            db.execSQL("INSERT INTO aluno VALUES(' "+ra+" ',' "+nome+" ',' "+curso+" ');");
+            db.execSQL("INSERT INTO aluno VALUES(' "+ra+"',' "+nome+"','"+curso+"');");
             msn.show("SUCESSO", "Aluno Cadastrados");
             limparCampos();
 
@@ -92,13 +92,56 @@ public class MainActivity extends Activity implements OnClickListener {
             }
             //Exibir os registros
             msn.show("ALUNOS", s.toString());
-
         }
         if(view == btnInfo){
             msn.show("Info - Exemplo Android e SQLite", "By Rafael Carvalho Caetano");
-
         }
-
+        if(view == btnPesquisar){
+            if(ra.trim().length()==0){
+                msn.show("Erro", "Informe o RA");
+                return;
+            }
+            Cursor c = db.rawQuery("SELECT * FROM aluno WHERE ra='"+ ra +"' ", null);
+            if(c.moveToFirst()){
+                eNome.setText(c.getString(1));
+                eCurso.setText(c.getString(2));
+            }else{
+                msn.show("Erro","RA inválido ou não localizado!");
+                return;
+            }
+        }
+        if(view == btnAtualizar){
+            //verificando se o ra é maior que zero
+            if(ra.trim().length()==0){
+                msn.show("Erro", "Informe o RA");
+                return;
+            }
+            Cursor c = db.rawQuery("SELECT * FROM aluno WHERE ra='"+ra+"'", null);
+            if(c.moveToFirst()){
+                db.execSQL("UPDATE aluno SET nome='"+nome+"', curso='"+curso+"' WHERE ra='"+ra+"';");
+                msn.show("SUCESSO","Dados Atualizados com sucesso !");
+            }else{
+                msn.show("Erro","RA inválido ou não localizado!");
+                return;
+            }
+            limparCampos();
+        }
+        if(view == btnExcluir){
+            //verificando se o ra é maior que zero
+            if(ra.trim().length()==0){
+                msn.show("Erro", "Informe o RA");
+                return;
+            }
+            Cursor c = db.rawQuery("SELECT * FROM aluno WHERE ra='"+ra+"'", null);
+            if(c.moveToFirst()){
+                db.execSQL("DELETE FROM aluno WHERE ra='"+ra+"';");
+                msn.show("SUCESSO", "Registro excluído com sucesso !");
+            }else{
+                msn.show("Erro", "RA não localizado");
+                return;
+            }
+            limparCampos();
+        }
     }
     //Limpa o campo dos EditText
     public void limparCampos(){
