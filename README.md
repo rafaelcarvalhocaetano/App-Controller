@@ -1,2 +1,2 @@
 # App-Controller
-Aplicativo responsável por controlar o fluxo de entrada e saída de pneus da empresa, assim como calcular a km rodada e suas informações.
+Aplicativo que controlará o fluxo de materiais da oficina.
