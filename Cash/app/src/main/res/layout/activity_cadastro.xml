@@ -19,7 +19,8 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        >
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/nome"
