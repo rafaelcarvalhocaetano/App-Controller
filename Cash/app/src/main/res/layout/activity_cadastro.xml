@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<LinearLayout android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:layout_width="match_parent"
@@ -13,12 +13,13 @@
         android:layout_marginTop="50dp" />
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="30dp">
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/nome"
@@ -29,6 +30,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -44,20 +46,26 @@
             android:inputType="textEmailAddress"/>
 
     </android.support.design.widget.TextInputLayout>
+
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="1dp">
+        android:layout_marginTop="1dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        app:passwordToggleEnabled="true">
 
         <android.support.v7.widget.AppCompatEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/senha"
-            android:hint="Informe sua SENHA"
-            android:inputType="numberPassword"/>
+            android:hint="Senha com 8 Número"
+            android:inputType="numberPassword"
+            android:maxLength="8"/>
 
     </android.support.design.widget.TextInputLayout>
 
