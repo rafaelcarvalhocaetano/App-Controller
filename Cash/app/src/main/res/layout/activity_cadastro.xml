@@ -3,14 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fundo">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/logo"
-        android:src="@drawable/ic_launcher_background"
-        android:layout_marginTop="50dp" />
+        android:src="@drawable/icone"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"/>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/text_nome"
@@ -75,6 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="cadastrar"
-        android:id="@+id/btn_cadastrar"/>
+        android:id="@+id/btn_cadastrar"
+        android:background="@drawable/fundo_botao"/>
 
 </LinearLayout>

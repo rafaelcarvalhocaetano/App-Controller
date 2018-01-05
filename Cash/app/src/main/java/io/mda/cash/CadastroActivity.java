@@ -1,5 +1,6 @@
 package io.mda.cash;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
@@ -14,37 +15,20 @@ import android.view.View;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    private AppCompatEditText nome;
-    private AppCompatEditText email;
-    private AppCompatEditText senha;
-    private AppCompatButton btn_salvar;
+    //private AppCompatButton btn_logar;
 
-    private TextInputLayout textNome;
-    private TextInputLayout textEmail;
-    private TextInputLayout textSenha;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        nome = (AppCompatEditText) findViewById(R.id.nome);
-        email = (AppCompatEditText) findViewById(R.id.email);
-        senha = (AppCompatEditText) findViewById(R.id.senha);
 
-        textNome = (TextInputLayout) findViewById(R.id.text_nome);
-        textEmail = (TextInputLayout) findViewById(R.id.text_email);
-        textSenha = (TextInputLayout) findViewById(R.id.text_senha);
 
-        btn_salvar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
 
     }
+    /*
 
     public void validationForm(){
         if(nome.getText().toString().isEmpty() ){
@@ -66,4 +50,5 @@ public class CadastroActivity extends AppCompatActivity {
             textSenha.setErrorEnabled( false );
         }
     }
+    */
 }
