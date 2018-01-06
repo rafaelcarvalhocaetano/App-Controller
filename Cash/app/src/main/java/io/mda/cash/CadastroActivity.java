@@ -24,9 +24,6 @@ public class CadastroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro);
 
 
-
-
-
     }
     /*
 
