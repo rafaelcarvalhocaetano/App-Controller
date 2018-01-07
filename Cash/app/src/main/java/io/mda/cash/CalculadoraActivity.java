@@ -20,9 +20,8 @@ import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 
 public class CalculadoraActivity extends AppCompatActivity {
 
-    private Button btn;
+    private ImageButton btn;
     private Boolean flag=true;
-    private int contador = 0;
 
 
     @Override
@@ -30,21 +29,24 @@ public class CalculadoraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salario);
 
-        btn = (Button) findViewById(R.id.btn);
+        btn = (ImageButton) findViewById(R.id.btn);
 
         final MaterialCalendarView m = (MaterialCalendarView) findViewById(R.id.calendarView);
 
         btn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
-               if(contador % 2 == 0){
+                if(flag){
+                    btn.setBackgroundResource(R.drawable.ic_calendario);
                     m.setVisibility(View.VISIBLE);
-                    contador ++;
-               }else{
-                   m.setVisibility(View.GONE);
-                   contador ++;
-               }
+                    flag = false;
+                }else{
+                    m.setVisibility(View.GONE);
+                    btn.setBackgroundResource(R.drawable.ic_action_calendar_day);
+                    flag = true;
+                }
 
             }
         });
