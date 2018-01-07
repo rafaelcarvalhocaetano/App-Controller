@@ -8,12 +8,12 @@ import android.support.v7.app.AppCompatActivity;
  * Created by rafael on 07/01/18.
  */
 
-public class CadastroActivity extends AppCompatActivity {
+public class CalculadoraActivity extends AppCompatActivity {
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro);
+        setContentView(R.layout.activity_salario);
     }
 }
