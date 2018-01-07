@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         btn_logar = (AppCompatButton) findViewById(R.id.btn_logar);
 
-
-
         btn_logar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

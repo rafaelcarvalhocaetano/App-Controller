@@ -15,7 +15,7 @@ import android.view.View;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    //private AppCompatButton btn_logar;
+    private AppCompatButton btn;
 
 
     @Override
@@ -23,6 +23,14 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
+        btn = (AppCompatButton) findViewById(R.id.btn_cadastrar);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CadastroActivity.this, InforActivity.class));
+            }
+        });
 
     }
     /*
