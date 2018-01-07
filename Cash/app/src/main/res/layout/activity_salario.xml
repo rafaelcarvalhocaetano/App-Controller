@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Calendario"
-    android:background="@drawable/fundo_tela">
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/calendarView"
+        mcv_showOtherDates="all"
+        mcv_selectionColor="#00F"
         android:visibility="gone"
-        />
+        android:layout_margin="20dp"/>
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="asdasdas"
         android:layout_gravity="center"
-        />
+        android:text="btn"
+        android:src="@drawable/ic_action_calendar_day"
+        android:id="@+id/btn"/>
+
+
+
 
 </LinearLayout>
