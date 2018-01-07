@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CadastroActivity"/>
-        <activity android:name=".CalculadoraActivity" android:theme="@style/Calendario"/>
+        <activity android:name=".CalculadoraActivity"/>
     </application>
 
 </manifest>

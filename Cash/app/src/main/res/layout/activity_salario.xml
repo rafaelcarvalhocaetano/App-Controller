@@ -3,10 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Calendario"
     android:orientation="vertical"
-    android:background="@drawable/fundo_tela"
-    >
+    android:background="@drawable/fundo_tela">
 
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
@@ -19,13 +17,45 @@
         android:layout_margin="20dp"/>
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="btn"
-        android:src="@drawable/ic_action_calendar_day"
         android:id="@+id/btn"
-        android:background="@drawable/fundo_tela"/>
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/fundo_tela"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_action_calendar_day"
+        android:text="btn" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Piso Salarial"
+            android:inputType="text"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Adicional"
+            android:inputType="text"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"/>
+
+    </android.support.design.widget.TextInputLayout>
 
 
 

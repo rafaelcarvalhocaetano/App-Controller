@@ -39,6 +39,7 @@ public class CalculadoraActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(flag){
+                    btn.setBackgroundColor(R.drawable.fundo_botao);
                     btn.setBackgroundResource(R.drawable.ic_calendario);
                     m.setVisibility(View.VISIBLE);
                     flag = false;
