@@ -16,13 +16,12 @@
         android:visibility="gone"
         android:layout_margin="20dp"/>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/fundo_tela"
+        android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_action_calendar_day"
         android:text="btn" />
@@ -56,9 +55,5 @@
             android:textColor="#FFFFFF"/>
 
     </android.support.design.widget.TextInputLayout>
-
-
-
-
 
 </LinearLayout>

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/fundo_cor_tela"/>
+
+    <gradient
+        android:startColor="#bc1717"
+        android:endColor="#232121"
+        android:angle="45"/>
 </shape>

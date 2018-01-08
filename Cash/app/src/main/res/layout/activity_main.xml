@@ -7,7 +7,7 @@
     android:background="@drawable/fundo_tela"
     android:orientation="vertical">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/img"
         android:layout_width="196dp"
@@ -16,7 +16,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_action_calendar_day" />
+        android:src="@drawable/ic_action_calculator" />
 
 
     <android.support.design.widget.TextInputLayout
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/email"
-            android:hint="Informe seu e-mail"
+            android:hint="E-mail"
             android:inputType="textEmailAddress"
             android:textColorHint="@android:color/white"
             android:textColor="@android:color/white"/>
@@ -69,8 +69,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/fundo_botao"
-        android:text="LOGAR" />
-
+        android:text="LOGAR"/>
     <TextView
         android:id="@+id/texto_cadastrar"
         android:layout_width="match_parent"
