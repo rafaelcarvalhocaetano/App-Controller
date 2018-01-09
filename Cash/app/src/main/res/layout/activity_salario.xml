@@ -36,8 +36,8 @@
             android:layout_height="wrap_content"
             android:hint="Piso Salarial"
             android:inputType="text"
-            android:textColorHint="#FFFFFF"
-            android:textColor="#FFFFFF"/>
+            android:textColorHint="@color/cor_write"
+            android:textColor="@color/cor_write"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -51,8 +51,8 @@
             android:layout_height="wrap_content"
             android:hint="Adicional"
             android:inputType="text"
-            android:textColorHint="#FFFFFF"
-            android:textColor="#FFFFFF"/>
+            android:textColorHint="@color/cor_write"
+            android:textColor="@color/cor_write"/>
 
     </android.support.design.widget.TextInputLayout>
 

@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
@@ -20,7 +21,7 @@ import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 
 public class CalculadoraActivity extends AppCompatActivity {
 
-    private ImageButton btn;
+    private ImageView btn;
     private Boolean flag=true;
 
 
@@ -29,7 +30,7 @@ public class CalculadoraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salario);
 
-        btn = (ImageButton) findViewById(R.id.btn);
+        btn = (ImageView) findViewById(R.id.btn);
 
         final MaterialCalendarView m = (MaterialCalendarView) findViewById(R.id.calendarView);
 

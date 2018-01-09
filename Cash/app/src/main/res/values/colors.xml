@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="planoFundo">#FFF</color>
     <color name="fundo_cor_tela">#00897B</color>
+    <color name="cor_write">#FFFFFF</color>
 </resources>
