@@ -31,6 +31,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"/>
 
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,10 +60,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Adicional"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:textColorHint="@color/cor_write"
-            android:textColor="@color/cor_write"/>
+            android:textColor="@color/cor_write" />
 
     </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_botao"
+        android:layout_margin="20dp"
+        android:text="Calcular salário"/>
+
+
+
+
+
+
 
 </LinearLayout>
