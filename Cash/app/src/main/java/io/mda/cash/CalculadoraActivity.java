@@ -12,8 +12,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+
+import java.util.Calendar;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 /**
  * Created by rafael on 07/01/18.
@@ -23,6 +28,7 @@ public class CalculadoraActivity extends AppCompatActivity {
 
     private ImageView btn;
     private Boolean flag=true;
+    private int dia = 0;
 
 
     @Override
@@ -34,6 +40,10 @@ public class CalculadoraActivity extends AppCompatActivity {
 
         final MaterialCalendarView m = (MaterialCalendarView) findViewById(R.id.calendarView);
 
+        
+
+
+
         btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -43,6 +53,8 @@ public class CalculadoraActivity extends AppCompatActivity {
                     btn.setBackgroundColor(R.drawable.fundo_botao);
                     btn.setBackgroundResource(R.drawable.ic_calendario);
                     m.setVisibility(View.VISIBLE);
+                    Toast.makeText(CalculadoraActivity.this, dia+"", Toast.LENGTH_SHORT).show();
+                    dia ++;
                     flag = false;
                 }else{
                     m.setVisibility(View.GONE);
