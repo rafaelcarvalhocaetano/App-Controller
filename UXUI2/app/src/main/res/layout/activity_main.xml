@@ -55,19 +55,113 @@
             <android.support.v7.widget.CardView
                 android:layout_width="180dp"
                 android:layout_height="150dp"
-                android:background="#FFF"
+                android:layout_margin="10dp"
+                android:background="#FFFFFF"
                 android:clickable="true"
-                android:layout_margin="10dp">
+                app:cardBackgroundColor="@android:color/darker_gray">
 
-               
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_action_anchor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="ELEMENTOS ANCORADOS"
+                    android:textColor="#FFF" />
+
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 android:layout_width="180dp"
                 android:layout_height="150dp"
-                android:background="#FFF"
+                android:layout_margin="10dp"
+                android:background="#FFFFFF"
                 android:clickable="true"
-                android:layout_margin="10dp">
+                app:cardBackgroundColor="@android:color/darker_gray">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_action_anchor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="ELEMENTOS ANCORADOS"
+                    android:textColor="#FFF" />
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardBackgroundColor="@android:color/darker_gray">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_action_anchor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="ELEMENTOS ANCORADOS"
+                    android:textColor="#FFF" />
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardBackgroundColor="@android:color/darker_gray">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_action_anchor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="ELEMENTOS ANCORADOS"
+                    android:textColor="#FFF" />
+
 
             </android.support.v7.widget.CardView>
 
