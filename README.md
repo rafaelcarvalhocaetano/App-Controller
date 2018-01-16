@@ -5,3 +5,4 @@ Também terá aplicativos que consumirão API restful.
  
 - CASH :: Aplicativo com a funcionalidade de calcular salários entre escalar de serviços dos segurança patrimoniais do Estado de São Paulo.
 - UXUI :: Aplicatiovos com foco em UX e UI.
+- UXUI :: Sistema de cadastro via PARSE
